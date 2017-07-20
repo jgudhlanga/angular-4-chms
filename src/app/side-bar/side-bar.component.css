@@ -1,0 +1,19 @@
+.main-side-bar{
+    width: 5%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-side-bar > ul > li> a{
+    padding: 15px;
+    display: block;
+    width: 100%;
+}
+.main-side-bar > ul > li> a:hover{
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all all 0.5s linear;
+    transition: all all 0.5s linear;
+    border-right: 3px solid orange;
+    background-color: #000000;
+    color: #FFFFFF;
+}

@@ -1,0 +1,14 @@
+/* TEXTS */
+.text-white{
+    color: #FFF;
+}
+.main-content{
+    padding-top: 20px;
+}
+.jd-page-header{
+  color: #808080; font-weight: bold; font-size: 20px; margin-bottom: 4px;
+  text-transform: capitalize;
+  overflow: hidden;
+  padding: 5px 0;
+
+  }

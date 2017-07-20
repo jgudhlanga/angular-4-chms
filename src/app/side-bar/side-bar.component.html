@@ -1,0 +1,45 @@
+<div class="col-md-1 main-side-bar" *ngIf="authService.isLoggedIn()">
+    <ul class="nav nav-sidebar">
+        <li>
+            <a routerLink="/">
+                <i class="fa fa-home fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/dashboard">
+                <i class="fa fa-dashboard fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/membership">
+                <i class="fa fa-group fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/calendar">
+                <i class="fa fa-calendar fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/library">
+                <i class="fa fa-folder fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/reports">
+                <i class="fa fa-line-chart fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/help">
+                <i class="fa fa-question-circle fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/config">
+                <i class="fa fa-wrench fa-2x"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>
