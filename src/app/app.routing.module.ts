@@ -20,27 +20,28 @@ import { DepartmentComponent } from './department/department.component';
 import { ProjectComponent } from './project/project.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'calendar', component: CalendarComponent, canActivate: [AuthGuard]},
-    { path: 'config', component: ConfigComponent, canActivate: [AuthGuard]},
-    { path: 'cell-groups', component: CellGroupComponent, canActivate: [AuthGuard] },
-    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-    { path: 'departments', component: DepartmentComponent, canActivate: [AuthGuard] },
-    { path: 'families', component: FamilyComponent, canActivate: [AuthGuard] },
-    { path: 'help', component: HelpComponent, canActivate: [AuthGuard]},
-    { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
-    { path: 'library', component: LibraryComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: AuthComponent },
-    { path: 'logout', component: AuthComponent },
-    { path: 'membership', component: MemberComponent,  canActivate: [AuthGuard] },
-    { path: 'projects', component: ProjectComponent, canActivate: [AuthGuard] },
-    { path: 'register', component: RegisterComponent },
-    { path: 'reports', component: ReportComponent, canActivate: [AuthGuard] },
-    { path: 'zones', component: ZoneComponent,  canActivate: [AuthGuard] },
-    { path: '**', component: NotFoundComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'calendar', component: CalendarComponent, canActivate: [AuthGuard]},
+  { path: 'config', component: ConfigComponent, canActivate: [AuthGuard]},
+  { path: 'cell-groups', component: CellGroupComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  { path: 'departments', component: DepartmentComponent, canActivate: [AuthGuard] },
+  { path: 'families', component: FamilyComponent, canActivate: [AuthGuard] },
+  { path: 'help', component: HelpComponent, canActivate: [AuthGuard]},
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+  { path: 'library', component: LibraryComponent, canActivate: [AuthGuard] },
+  { path: 'auth', component: AuthComponent },
+  { path: 'logout', component: AuthComponent },
+  { path: 'membership', component: MemberComponent,  canActivate: [AuthGuard] },
+  { path: 'projects', component: ProjectComponent, canActivate: [AuthGuard] },
+  { path: 'register', component: RegisterComponent },
+  { path: 'reports', component: ReportComponent, canActivate: [AuthGuard] },
+  { path: 'zones', component: ZoneComponent,  canActivate: [AuthGuard] },
+  { path: '**', component: NotFoundComponent }
 ]
+
 @NgModule({
-    imports:[RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports:[RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class RoutingModule{};

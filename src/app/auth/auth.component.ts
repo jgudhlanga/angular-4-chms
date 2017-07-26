@@ -19,26 +19,26 @@ export class AuthComponent implements OnInit {
   loading: boolean;
 
   ngOnInit() {
-      this.formLogin = new FormGroup({
-          email: new FormControl("", Validators.compose([
-              Validators.required, Validators.minLength(5)
-          ])),
-          password: new FormControl("", Validators.required)
-      })
+    this.formLogin = new FormGroup({
+      email: new FormControl("", Validators.compose([
+        Validators.required, Validators.minLength(5)
+      ])),
+      password: new FormControl("", Validators.required)
+    })
   }
 
-  login(data: any){
-      this.loading = true;
-      this.authService.login(data)
-       .subscribe(
-            data => { data },
-            error => { error },
-            () => {
-                this.loading=false;
-                this.router.navigate(['/home']);
-            }
-        );
-
+  login(data: any) {
+    this.loading = true;
+    this.authService.login(data)
+    .subscribe(
+      data => {data},
+      error => {
+        this.error = error;
+        this.loading=false;
+      },
+      () => {
+        this.loading=false;
+        this.router.navigate(['/home']);
+      });
   }
-
 }

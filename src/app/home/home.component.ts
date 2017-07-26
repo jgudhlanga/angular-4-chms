@@ -12,21 +12,27 @@ import { User } from '../auth/user';
 })
 export class HomeComponent implements OnInit {
 
-    constructor( private authService: AuthService, private router: Router ) { }
+  constructor( private authService: AuthService, private router: Router ) { }
 
-    user: User;
-    error: any;
-    getUser(){
-        if(this.authService.isLoggedIn){
-            this.authService.getUser()
-            .subscribe(
-                user => { this.user = user },
-                error => { this.error = error }
-            )
+  user: User;
+  error: any;
+
+  getUser() {
+    if (this.authService.isLoggedIn) {
+      this.authService.getUser()
+      .subscribe(
+        user => {
+        this.user = user;
+        },
+        error => {
+        this.error = error;
+        console.log(error);
         }
+     )
     }
+  }
 
-    ngOnInit() {
-        this.getUser();
-    }
+  ngOnInit() {
+    this.getUser();
+  }
 }
